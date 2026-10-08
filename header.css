@@ -242,7 +242,10 @@
 /* ---- Hero video --------------------------------------------------------- */
 .dat-hero { position: relative; overflow: hidden; background: var(--surface); height: max(420px, 100vh); height: max(420px, 100svh); }
 .dat-hero__video { position: absolute; inset: -2px; width: calc(100% + 4px); height: calc(100% + 4px); object-fit: cover; object-position: 62% 50%; display: block; pointer-events: none; user-select: none; -webkit-user-select: none; }
-@media (max-width: 767px) { .dat-hero__video { object-position: 50% 50%; } }
+@media (max-width: 767px) {
+  .dat-hero { height: 100vw; }   /* the mobile video is 1:1, so the hero is a square and nothing is cropped */
+  .dat-hero__video { object-position: 50% 50%; }
+}
 
 /* ---- Shelf: category tabs + product carousel -------------------------- */
 .dat-shelf { padding-block: 8vw; background: var(--paper); }
