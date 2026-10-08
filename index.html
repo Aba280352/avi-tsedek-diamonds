@@ -1,0 +1,1305 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>הדר אבי צדק</title>
+<meta name="description" content="תצוגת הדר לאתר הקטלוג של דניאל אבי צדק תכשיטים: פס עליון, לוגו, כפתור התייעצות, ניווט ראשי ומגה־מניו.">
+<link rel="preload" as="image" href="assets/hero-poster.jpg" fetchpriority="high">
+<link rel="stylesheet" href="header.css">
+<style>
+html, body { margin: 0; }/* ---- Skip link ---------------------------------------------------------- */
+.dat-skip {
+  position: fixed; top: 8px; inset-inline-start: 8px; z-index: 100;
+  padding: 10px 16px;
+  background: var(--ink); color: var(--paper);
+  font-size: 16px; font-weight: 600;
+  transform: translateY(-200%);
+}
+.dat-skip:focus { transform: none; }
+
+/* ---- Page content ------------------------------------------------------- */
+.dat-main { background: var(--paper); }
+.dat-category { padding: 8vw var(--side-padding); }
+.dat-category + .dat-category { border-top: 1px solid var(--line); }
+.dat-category__title { margin: 0; font-size: 80px; font-weight: 600; line-height: 1; text-wrap: balance; }
+.dat-category__title--sub { font-size: 48px; }
+.dat-category__lede { margin: var(--space-element-max) 0 0; max-width: 36em; }
+.dat-category__lede a { text-decoration: underline; text-underline-offset: 3px; }
+.dat-grid {
+  margin-top: 4vw;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-element-max);
+}
+.dat-card__media { position: relative; }
+.dat-card__alt { position: absolute; inset: 0; opacity: 0; transition: opacity .4s; }
+.dat-card:hover .dat-card__alt { opacity: 1; }
+.dat-card__price { margin: -8px 0 0; font-size: 18px; font-weight: 600; line-height: 1.3; }
+
+/* ---- Mega menu: neutral placeholders ------------------------------------ */
+.dat-mega__tile--soon .dat-card__media { background: var(--surface); }
+.dat-mega__tile--soon .dat-card__name { color: var(--ink-muted); }
+
+@media (max-width: 1024px) {
+  .dat-category__title { font-size: 58px; }
+  .dat-category__title--sub { font-size: 40px; }
+  .dat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .dat-category { padding-block: 80px; }
+  .dat-category__title { font-size: 36px; }
+  .dat-category__title--sub { font-size: 30px; }
+  .dat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 30px; }
+}
+</style>
+</head>
+<body>
+<a class="dat dat-skip" href="#dat-main">דילוג לתוכן</a>
+
+<div class="dat dat-topbar">להתייעצות – <a href="tel:+972545053903">054-5053903</a></div>
+
+<header class="dat dat-header" data-dat-header>
+  <div class="dat-header__main">
+    <div class="dat-header__start">
+      <button class="dat-iconbtn dat-header__burger" type="button" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="dat-drawer" data-dat-drawer-open>
+        <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.5 5.5)" d="M0 0.5C0 0.224 0.224 0 0.5 0L18.5 0C18.776 0 19 0.224 19 0.5C19 0.776 18.776 1 18.5 1L0.5 1C0.224 1 0 0.776 0 0.5ZM18.5 6L0.5 6C0.224 6 0 6.224 0 6.5C0 6.776 0.224 7 0.5 7L18.5 7C18.776 7 19 6.776 19 6.5C19 6.224 18.776 6 18.5 6ZM18.5 12L0.5 12C0.224 12 0 12.224 0 12.5C0 12.776 0.224 13 0.5 13L18.5 13C18.776 13 19 12.776 19 12.5C19 12.224 18.776 12 18.5 12Z"></path></svg>
+      </button>
+      <a class="dat-link" href="https://wa.me/972545053903" target="_blank" rel="noopener">להתייעצות
+        <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"></path></svg>
+      </a>
+    </div>
+    <a class="dat-header__logo" href="index.html" aria-label="דניאל אבי צדק – לדף הבית"><img src="assets/logo-black.svg" alt="AVI TSEDEK DIAMONDS" width="205" height="48"></a>
+    <div class="dat-header__end">
+      <button class="dat-iconbtn" type="button" aria-label="מתנה מאיתנו" aria-haspopup="dialog" aria-controls="dat-quiz" data-dat-quiz-open>
+        <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.5 2.5)" d="M17 4L15.487 4C15.804 3.581 16 3.065 16 2.5C16 1.122 14.879 0 13.5 0C12.753 0 12.051 0.333 11.569 0.918C11.539 0.955 10.19 2.75 9.5 3.668C8.809 2.749 7.459 0.953 7.426 0.912C6.949 0.332 6.247 0 5.5 0C4.121 0 3 1.122 3 2.5C3 3.065 3.195 3.581 3.513 4L2 4C0.897 4 0 4.897 0 6L0 9.5C0 9.776 0.224 10 0.5 10L1 10L1 15.5C1 17.79 2.21 19 4.5 19L14.5 19C16.79 19 18 17.79 18 15.5L18 10L18.5 10C18.776 10 19 9.776 19 9.5L19 6C19 4.897 18.103 4 17 4ZM12.346 1.548C12.633 1.2 13.053 1 13.5 1C14.327 1 15 1.673 15 2.5C15 3.327 14.327 4 13.5 4L10.501 4C11.209 3.058 12.296 1.613 12.346 1.548ZM4 2.5C4 1.673 4.673 1 5.5 1C5.947 1 6.367 1.2 6.646 1.538C6.702 1.61 7.79 3.058 8.499 4L5.5 4C4.673 4 4 3.327 4 2.5ZM1 6C1 5.448 1.448 5 2 5L5.5 5L9 5L9 9L1 9L1 6ZM2 15.5L2 10L9 10L9 18L4.5 18C2.771 18 2 17.229 2 15.5ZM17 15.5C17 17.229 16.229 18 14.5 18L10 18L10 10L17 10L17 15.5ZM18 9L10 9L10 5L13.5 5L17 5C17.552 5 18 5.448 18 6L18 9Z"/></svg>
+      </button>
+      <button class="dat-iconbtn" type="button" aria-label="חיפוש">
+        <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.501 2.5)" d="M18.853 18.146L14.844 14.137C16.18 12.635 17 10.664 17 8.5C17 3.813 13.187 0 8.5 0C3.813 0 0 3.813 0 8.5C0 13.187 3.813 17 8.5 17C10.664 17 12.635 16.18 14.137 14.844L18.146 18.853C18.244 18.951 18.372 18.999 18.5 18.999C18.628 18.999 18.756 18.95 18.854 18.853C19.048 18.658 19.048 18.342 18.853 18.146ZM0.999 8.5C0.999 4.365 4.363 1 8.499 1C12.635 1 15.999 4.365 15.999 8.5C15.999 12.635 12.635 16 8.499 16C4.363 16 0.999 12.635 0.999 8.5Z"></path></svg>
+      </button>
+      <button class="dat-iconbtn" type="button" aria-label="פריטים שנשלחים בוואטסאפ">
+        <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(3.5 2.5)" d="M15 5L12.5 5L12.5 4C12.5 1.794 10.706 0 8.5 0C6.294 0 4.5 1.794 4.5 4L4.5 5L2 5C0.897 5 0 5.897 0 7L0 15.5C0 17.79 1.21 19 3.5 19L13.5 19C15.79 19 17 17.79 17 15.5L17 7C17 5.897 16.103 5 15 5ZM5.5 4C5.5 2.346 6.846 1 8.5 1C10.154 1 11.5 2.346 11.5 4L11.5 5L5.5 5L5.5 4ZM16 15.5C16 17.229 15.229 18 13.5 18L3.5 18C1.771 18 1 17.229 1 15.5L1 7C1 6.448 1.448 6 2 6L4.5 6L4.5 8.5C4.5 8.776 4.724 9 5 9C5.276 9 5.5 8.776 5.5 8.5L5.5 6L11.5 6L11.5 8.5C11.5 8.776 11.724 9 12 9C12.276 9 12.5 8.776 12.5 8.5L12.5 6L15 6C15.552 6 16 6.448 16 7L16 15.5Z"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="dat-nav" aria-label="ניווט ראשי">
+    <ul class="dat-nav__list">
+      <li class="dat-nav__item"><a class="dat-nav__link" href="index.html" aria-current="page">טבעות נישואין</a></li>
+      <li class="dat-nav__item dat-nav__item--mega" data-dat-mega>
+        <button class="dat-nav__link" type="button" aria-expanded="false" aria-controls="dat-mega-jewelry" aria-haspopup="true">תכשיטים <svg class="dat-nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(4.5 8.501)" d="M14.854 0.853L7.854 7.853C7.756 7.951 7.628 7.999 7.5 7.999C7.372 7.999 7.244 7.95 7.146 7.853L0.146 0.853C-0.049 0.658 -0.049 0.341 0.146 0.146C0.341 -0.049 0.658 -0.049 0.853 0.146L7.499 6.792L14.145 0.146C14.34 -0.049 14.657 -0.049 14.852 0.146C15.047 0.341 15.049 0.657 14.854 0.853Z"></path></svg></button>
+        <div class="dat-mega" id="dat-mega-jewelry">
+          <div class="dat-mega__grid">
+            <a class="dat-card dat-mega__tile" href="index.html" aria-current="page">
+              <div class="dat-card__media"><img src="assets/tile-wedding-rings.jpg" alt="" width="640" height="640" loading="lazy"></div>
+              <h3 class="dat-card__name">טבעות נישואין</h3>
+              <p class="dat-card__specs">21 דגמים</p>
+            </a>
+            <div class="dat-card dat-mega__tile dat-mega__tile--soon">
+              <div class="dat-card__media"></div>
+              <h3 class="dat-card__name">טבעות מעוצבות</h3>
+              <p class="dat-card__specs">בקרוב</p>
+            </div>
+            <div class="dat-card dat-mega__tile dat-mega__tile--soon">
+              <div class="dat-card__media"></div>
+              <h3 class="dat-card__name">שרשראות</h3>
+              <p class="dat-card__specs">בקרוב</p>
+            </div>
+            <div class="dat-card dat-mega__tile dat-mega__tile--soon">
+              <div class="dat-card__media"></div>
+              <h3 class="dat-card__name">סטים לחינה</h3>
+              <p class="dat-card__specs">בקרוב</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="dat-nav__item"><a class="dat-nav__link" href="#about">אודות</a></li>
+      <li class="dat-nav__item"><a class="dat-nav__link" href="#contact">צור קשר</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="dat dat-drawer" data-lenis-prevent id="dat-drawer" role="dialog" aria-modal="true" aria-label="תפריט" inert hidden>
+  <div class="dat-drawer__head">
+    <button class="dat-iconbtn dat-drawer__close" type="button" aria-label="סגירת תפריט" data-dat-drawer-close>
+      <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(5.5 5.501)" d="M12.854 12.145C13.049 12.34 13.049 12.657 12.854 12.852C12.756 12.95 12.628 12.998 12.5 12.998C12.372 12.998 12.244 12.949 12.146 12.852L6.5 7.206L0.854 12.852C0.756 12.95 0.628 12.998 0.5 12.998C0.372 12.998 0.244 12.949 0.146 12.852C-0.049 12.657 -0.049 12.34 0.146 12.145L5.792 6.499L0.146 0.853C-0.049 0.658 -0.049 0.341 0.146 0.146C0.341 -0.049 0.658 -0.049 0.853 0.146L6.499 5.792L12.145 0.146C12.34 -0.049 12.657 -0.049 12.852 0.146C13.047 0.341 13.047 0.658 12.852 0.853L7.207 6.499L12.854 12.145Z"></path></svg>
+    </button>
+    <a class="dat-drawer__logo" href="index.html" aria-label="דניאל אבי צדק – לדף הבית"><img src="assets/logo-black.svg" alt="AVI TSEDEK DIAMONDS" width="171" height="40"></a>
+    <span></span>
+  </div>
+  <ul class="dat-drawer__list">
+    <li><a class="dat-drawer__link" href="index.html" aria-current="page">טבעות נישואין</a></li>
+    <li>
+      <button class="dat-drawer__link" type="button" data-dat-acc aria-expanded="false" aria-controls="dat-drawer-jewelry">תכשיטים
+        <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(4.5 8.501)" d="M14.854 0.853L7.854 7.853C7.756 7.951 7.628 7.999 7.5 7.999C7.372 7.999 7.244 7.95 7.146 7.853L0.146 0.853C-0.049 0.658 -0.049 0.341 0.146 0.146C0.341 -0.049 0.658 -0.049 0.853 0.146L7.499 6.792L14.145 0.146C14.34 -0.049 14.657 -0.049 14.852 0.146C15.047 0.341 15.049 0.657 14.854 0.853Z"></path></svg>
+      </button>
+      <ul class="dat-drawer__sub" id="dat-drawer-jewelry" hidden>
+        <li><a class="dat-drawer__sublink" href="index.html" aria-current="page">טבעות נישואין</a></li>
+        <li><span class="dat-drawer__sublink dat-drawer__sublink--soon">טבעות מעוצבות <span class="dat-drawer__soon">בקרוב</span></span></li>
+        <li><span class="dat-drawer__sublink dat-drawer__sublink--soon">שרשראות <span class="dat-drawer__soon">בקרוב</span></span></li>
+        <li><span class="dat-drawer__sublink dat-drawer__sublink--soon">סטים לחינה <span class="dat-drawer__soon">בקרוב</span></span></li>
+      </ul>
+    </li>
+    <li><a class="dat-drawer__link" href="#about">אודות</a></li>
+    <li><a class="dat-drawer__link" href="#contact">צור קשר</a></li>
+  </ul>
+  <div class="dat-drawer__footer">
+    <a class="dat-btn dat-btn--block" href="https://wa.me/972545053903" target="_blank" rel="noopener">להתייעצות בוואטסאפ</a>
+  </div>
+</div>
+
+<main class="dat dat-main" id="dat-main">
+  <section class="dat-hero">
+    <video class="dat-hero__video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg" width="1600" height="900" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback">
+      <source src="assets/hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+  </section>
+  <section class="dat-shelf" aria-label="מוצרים">
+    <div class="dat-tabs" role="tablist" aria-label="קטגוריות">
+      <button class="dat-tab" type="button" role="tab" id="tab-rings" aria-controls="panel-rings" aria-selected="true" tabindex="0">טבעות נישואין</button>
+      <button class="dat-tab" type="button" role="tab" id="tab-designed" aria-controls="panel-designed" aria-selected="false" tabindex="-1">טבעות מעוצבות</button>
+      <button class="dat-tab" type="button" role="tab" id="tab-necklaces" aria-controls="panel-necklaces" aria-selected="false" tabindex="-1">שרשראות</button>
+      <button class="dat-tab" type="button" role="tab" id="tab-henna" aria-controls="panel-henna" aria-selected="false" tabindex="-1">סטים לחינה</button>
+    </div>
+    <div class="dat-shelf__viewport" data-dat-shelf>
+      <button class="dat-shelf__arrow dat-shelf__arrow--next" type="button" aria-label="הבא"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"></path></svg></button>
+      <button class="dat-shelf__arrow dat-shelf__arrow--prev" type="button" aria-label="הקודם"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.5 4.502)" d="M18.853 7.852L11.853 14.852C11.755 14.95 11.627 14.998 11.499 14.998C11.371 14.998 11.243 14.949 11.145 14.852C10.95 14.657 10.95 14.34 11.145 14.145L17.291 7.999L0.5 7.999C0.224 7.999 0 7.775 0 7.499C0 7.223 0.224 6.999 0.5 6.999L17.293 6.999L11.147 0.853C10.952 0.658 10.952 0.341 11.147 0.146C11.342 -0.049 11.659 -0.049 11.854 0.146L18.854 7.146C18.9 7.192 18.937 7.248 18.962 7.309C19.013 7.431 19.013 7.569 18.962 7.691C18.936 7.75 18.899 7.806 18.853 7.852Z"></path></svg></button>
+      <div class="dat-shelf__track" role="tabpanel" id="panel-rings" aria-labelledby="tab-rings">
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p01-a.jpg" alt="חצי איטרניטי רוז גולד" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p01-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">חצי איטרניטי רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪2,100</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p02-a.jpg" alt="סוליטר אובל בזל" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p02-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סוליטר אובל בזל</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪3,250</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p03-a.jpg" alt="טבעת קרוס־אובר זהב צהוב" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p03-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">טבעת קרוס־אובר זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪3,400</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p04-a.jpg" alt="סוליטר עדין רוז גולד" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p04-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סוליטר עדין רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪4,900</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p05-a.jpg" alt="סוליטר קלאסי נקי" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p05-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סוליטר קלאסי נקי</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪5,400</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p06-a.jpg" alt="טבעת שלוש אבנים עדינה" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p06-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">טבעת שלוש אבנים עדינה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪6,900</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p07-a.jpg" alt="סוליטר עגול זהב צהוב" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p07-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪7,900</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p08-a.jpg" alt="סט טיפה משובצת רוז גולד" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p08-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סט טיפה משובצת רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪7,900</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p09-a.jpg" alt="סוליטר פרינסס" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p09-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סוליטר פרינסס</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪8,900</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p10-a.jpg" alt="טבעת איטרניטי אמרלד בזל" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p10-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">טבעת איטרניטי אמרלד בזל</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪9,800</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p11-a.jpg" alt="סוליטר פרינסס שיבוץ מלא" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p11-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סוליטר פרינסס שיבוץ מלא</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪11,500</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p12-a.jpg" alt="טבעת וינטג׳ ספליט" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p12-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">טבעת וינטג׳ ספליט</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪11,900</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p13-a.jpg" alt="טבעת אמרלד זהב צהוב" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p13-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">טבעת אמרלד זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪12,700</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p14-a.jpg" alt="טבעת אובל שלוש אבנים" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p14-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">טבעת אובל שלוש אבנים</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪12,900</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p15-a.jpg" alt="סט טיפה הילה רוז גולד" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p15-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סט טיפה הילה רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪14,800</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p16-a.jpg" alt="טבעת טרילוגי עגולה" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p16-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">טבעת טרילוגי עגולה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪14,900</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p17-a.jpg" alt="סוליטר עגול קלאסי" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p17-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול קלאסי</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪16,500</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p18-a.jpg" alt="טבעת אובל וינטג׳ מרקיזות" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p18-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">טבעת אובל וינטג׳ מרקיזות</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪18,900</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p19-a.jpg" alt="סוליטר עגול שיבוץ עשיר" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p19-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול שיבוץ עשיר</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪19,800</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p20-a.jpg" alt="סוליטר אובל הילה נסתרת" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p20-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">סוליטר אובל הילה נסתרת</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪21,500</p>
+        </a>
+        <a class="dat-card dat-slide" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p21-a.jpg" alt="טבעת טיפה הילה" width="464" height="464" loading="lazy">
+            <img class="dat-card__alt" src="assets/p21-b.jpg" alt="" width="464" height="464" loading="lazy">
+          </div>
+          <h3 class="dat-card__name">טבעת טיפה הילה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪22,500</p>
+        </a>
+      </div>
+      <div class="dat-shelf__track" role="tabpanel" id="panel-designed" aria-labelledby="tab-designed" hidden>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">טבעת מעוצבת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">טבעת מעוצבת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">טבעת מעוצבת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">טבעת מעוצבת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">טבעת מעוצבת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">טבעת מעוצבת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+      </div>
+      <div class="dat-shelf__track" role="tabpanel" id="panel-necklaces" aria-labelledby="tab-necklaces" hidden>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">שרשרת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">שרשרת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">שרשרת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">שרשרת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">שרשרת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">שרשרת</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+      </div>
+      <div class="dat-shelf__track" role="tabpanel" id="panel-henna" aria-labelledby="tab-henna" hidden>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">סט לחינה</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">סט לחינה</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">סט לחינה</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">סט לחינה</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">סט לחינה</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+        <div class="dat-card dat-slide dat-card--soon">
+          <div class="dat-card__media"></div>
+          <h3 class="dat-card__name">מוצר בקרוב</h3>
+          <p class="dat-card__specs">סט לחינה</p>
+          <p class="dat-card__price">₪ —</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="dat-swap" id="dat-swap" aria-label="קמפיין: התכשיטים מתחלפים בגלילה">
+    <div class="dat-swap__stage">
+      <picture><source media="(max-width: 767px)" srcset="assets/swap-1-m.webp"><img class="dat-swap__img dat-swap__a" src="assets/swap-1-nobg.webp" alt="דוגמנית עם תכשיטי יהלומים בזהב לבן" width="1672" height="941" loading="eager" fetchpriority="low" decoding="async" draggable="false"></picture>
+      <picture><source media="(max-width: 767px)" srcset="assets/swap-2-m.webp"><img class="dat-swap__img dat-swap__b" src="assets/swap-2-nobg.webp" alt="אותה דוגמנית עם תכשיטי יהלומים בזהב צהוב" width="1672" height="941" loading="eager" fetchpriority="low" decoding="async" draggable="false"></picture>
+    </div>
+  </section>
+
+  <section class="dat-ring" id="dat-ring" aria-labelledby="dat-ring-title" data-ring-angle="20" data-ring-depth="6.5" data-ring-duration="1" data-ring-drag="1">
+    <div class="dat-ring__head">
+      <h2 class="dat-ring__title" id="dat-ring-title">Best Sellers</h2>
+      <p class="dat-ring__sub">הדגמים שהזוגות שלנו בוחרים שוב ושוב</p>
+    </div>
+    <div class="dat-ring__stage">
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p02-a.jpg" alt="סוליטר אובל בזל" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p02-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר אובל בזל</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪3,250</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p03-a.jpg" alt="טבעת קרוס־אובר זהב צהוב" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p03-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת קרוס־אובר זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪3,400</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p07-a.jpg" alt="סוליטר עגול זהב צהוב" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p07-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪7,900</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p09-a.jpg" alt="סוליטר פרינסס" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p09-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר פרינסס</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪8,900</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p10-a.jpg" alt="טבעת איטרניטי אמרלד בזל" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p10-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת איטרניטי אמרלד בזל</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪9,800</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p16-a.jpg" alt="טבעת טרילוגי עגולה" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p16-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת טרילוגי עגולה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪14,900</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p19-a.jpg" alt="סוליטר עגול שיבוץ עשיר" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p19-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול שיבוץ עשיר</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪19,800</p>
+        </a>
+    </div>
+    <div class="dat-ring__nav">
+    </div>
+  </section>
+  <section class="dat-ring" id="dat-ring-2" aria-labelledby="dat-ring-title-2" data-ring-angle="20" data-ring-depth="6.5" data-ring-duration="1" data-ring-drag="1">
+    <div class="dat-ring__head">
+      <h2 class="dat-ring__title" id="dat-ring-title-2">New in stock</h2>
+      <p class="dat-ring__sub">התכשיטים שרק עכשיו הגיעו</p>
+    </div>
+    <div class="dat-ring__stage">
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p02-a.jpg" alt="סוליטר אובל בזל" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p02-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר אובל בזל</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪3,250</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p03-a.jpg" alt="טבעת קרוס־אובר זהב צהוב" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p03-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת קרוס־אובר זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪3,400</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p07-a.jpg" alt="סוליטר עגול זהב צהוב" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p07-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪7,900</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p09-a.jpg" alt="סוליטר פרינסס" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p09-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר פרינסס</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪8,900</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p10-a.jpg" alt="טבעת איטרניטי אמרלד בזל" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p10-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת איטרניטי אמרלד בזל</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪9,800</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p16-a.jpg" alt="טבעת טרילוגי עגולה" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p16-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת טרילוגי עגולה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪14,900</p>
+        </a>
+        <a class="dat-card dat-ring__card" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p19-a.jpg" alt="סוליטר עגול שיבוץ עשיר" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p19-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול שיבוץ עשיר</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪19,800</p>
+        </a>
+    </div>
+    <div class="dat-ring__nav">
+    </div>
+  </section>
+  <section class="dat-panels" id="dat-panels" aria-label="הטבעות שלנו על דוגמניות">
+    <div class="dat-panels__row">
+      <article class="dat-panel" tabindex="0" aria-label="טבעת אובל וינטג׳ מרקיזות">
+        <img class="dat-panel__img" src="assets/panel-m1.webp" alt="דוגמנית עונדת טבעת אובל וינטג׳ מרקיזות" width="860" height="1528" loading="lazy" draggable="false">
+        <div class="dat-panel__body">
+          <span class="dat-panel__chev" aria-hidden="true"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(4.5 4.5)" d="M15 7.5C15 7.776 14.776 8 14.5 8L8 8L8 14.5C8 14.776 7.776 15 7.5 15C7.224 15 7 14.776 7 14.5L7 8L0.5 8C0.224 8 0 7.776 0 7.5C0 7.224 0.224 7 0.5 7L7 7L7 0.5C7 0.224 7.224 0 7.5 0C7.776 0 8 0.224 8 0.5L8 7L14.5 7C14.776 7 15 7.224 15 7.5Z"/></svg></span>
+          <h3 class="dat-panel__title">אובל וינטג׳ מרקיזות</h3>
+          <div class="dat-panel__meta">
+            <img class="dat-panel__thumb" src="assets/p18-a.jpg" alt="טבעת אובל וינטג׳ מרקיזות" width="64" height="64" loading="lazy" draggable="false">
+            <p class="dat-panel__price">טבעת נישואין<br>₪18,900</p>
+          </div>
+          <div class="dat-panel__more">
+            <a class="dat-link dat-panel__link" href="https://wa.me/972545053903?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%95%D7%94%D7%AA%D7%90%D7%9E%D7%94%20%D7%90%D7%99%D7%A9%D7%99%D7%AA%20%D7%A2%D7%9C%20%D7%98%D7%91%D7%A2%D7%AA%20%D7%90%D7%95%D7%91%D7%9C%20%D7%95%D7%99%D7%A0%D7%98%D7%92%D7%B3%20%D7%9E%D7%A8%D7%A7%D7%99%D7%96%D7%95%D7%AA" target="_blank" rel="noopener">התאמה אישית בוואטסאפ
+              <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="dat-panel" tabindex="0" aria-label="טבעת אובל שלוש אבנים">
+        <img class="dat-panel__img" src="assets/panel-m2.webp" alt="דוגמנית עונדת טבעת אובל שלוש אבנים" width="860" height="1528" loading="lazy" draggable="false">
+        <div class="dat-panel__body">
+          <span class="dat-panel__chev" aria-hidden="true"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(4.5 4.5)" d="M15 7.5C15 7.776 14.776 8 14.5 8L8 8L8 14.5C8 14.776 7.776 15 7.5 15C7.224 15 7 14.776 7 14.5L7 8L0.5 8C0.224 8 0 7.776 0 7.5C0 7.224 0.224 7 0.5 7L7 7L7 0.5C7 0.224 7.224 0 7.5 0C7.776 0 8 0.224 8 0.5L8 7L14.5 7C14.776 7 15 7.224 15 7.5Z"/></svg></span>
+          <h3 class="dat-panel__title">אובל שלוש אבנים</h3>
+          <div class="dat-panel__meta">
+            <img class="dat-panel__thumb" src="assets/p14-a.jpg" alt="טבעת אובל שלוש אבנים" width="64" height="64" loading="lazy" draggable="false">
+            <p class="dat-panel__price">טבעת נישואין<br>₪12,900</p>
+          </div>
+          <div class="dat-panel__more">
+            <a class="dat-link dat-panel__link" href="https://wa.me/972545053903?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%95%D7%94%D7%AA%D7%90%D7%9E%D7%94%20%D7%90%D7%99%D7%A9%D7%99%D7%AA%20%D7%A2%D7%9C%20%D7%98%D7%91%D7%A2%D7%AA%20%D7%90%D7%95%D7%91%D7%9C%20%D7%A9%D7%9C%D7%95%D7%A9%20%D7%90%D7%91%D7%A0%D7%99%D7%9D" target="_blank" rel="noopener">התאמה אישית בוואטסאפ
+              <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="dat-panel" tabindex="0" aria-label="טבעת טיפה הילה">
+        <img class="dat-panel__img" src="assets/panel-m3.webp" alt="דוגמנית עונדת טבעת טיפה הילה" width="860" height="1528" loading="lazy" draggable="false">
+        <div class="dat-panel__body">
+          <span class="dat-panel__chev" aria-hidden="true"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(4.5 4.5)" d="M15 7.5C15 7.776 14.776 8 14.5 8L8 8L8 14.5C8 14.776 7.776 15 7.5 15C7.224 15 7 14.776 7 14.5L7 8L0.5 8C0.224 8 0 7.776 0 7.5C0 7.224 0.224 7 0.5 7L7 7L7 0.5C7 0.224 7.224 0 7.5 0C7.776 0 8 0.224 8 0.5L8 7L14.5 7C14.776 7 15 7.224 15 7.5Z"/></svg></span>
+          <h3 class="dat-panel__title">טיפה הילה</h3>
+          <div class="dat-panel__meta">
+            <img class="dat-panel__thumb" src="assets/p21-a.jpg" alt="טבעת טיפה הילה" width="64" height="64" loading="lazy" draggable="false">
+            <p class="dat-panel__price">טבעת נישואין<br>₪22,500</p>
+          </div>
+          <div class="dat-panel__more">
+            <a class="dat-link dat-panel__link" href="https://wa.me/972545053903?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%95%D7%94%D7%AA%D7%90%D7%9E%D7%94%20%D7%90%D7%99%D7%A9%D7%99%D7%AA%20%D7%A2%D7%9C%20%D7%98%D7%91%D7%A2%D7%AA%20%D7%98%D7%99%D7%A4%D7%94%20%D7%94%D7%99%D7%9C%D7%94" target="_blank" rel="noopener">התאמה אישית בוואטסאפ
+              <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="dat-panel" tabindex="0" aria-label="טבעת קרוס־אובר זהב צהוב">
+        <img class="dat-panel__img" src="assets/panel-m4.webp" alt="דוגמנית עונדת טבעת קרוס־אובר זהב צהוב" width="860" height="1528" loading="lazy" draggable="false">
+        <div class="dat-panel__body">
+          <span class="dat-panel__chev" aria-hidden="true"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(4.5 4.5)" d="M15 7.5C15 7.776 14.776 8 14.5 8L8 8L8 14.5C8 14.776 7.776 15 7.5 15C7.224 15 7 14.776 7 14.5L7 8L0.5 8C0.224 8 0 7.776 0 7.5C0 7.224 0.224 7 0.5 7L7 7L7 0.5C7 0.224 7.224 0 7.5 0C7.776 0 8 0.224 8 0.5L8 7L14.5 7C14.776 7 15 7.224 15 7.5Z"/></svg></span>
+          <h3 class="dat-panel__title">קרוס־אובר זהב צהוב</h3>
+          <div class="dat-panel__meta">
+            <img class="dat-panel__thumb" src="assets/p03-a.jpg" alt="טבעת קרוס־אובר זהב צהוב" width="64" height="64" loading="lazy" draggable="false">
+            <p class="dat-panel__price">טבעת נישואין<br>₪3,400</p>
+          </div>
+          <div class="dat-panel__more">
+            <a class="dat-link dat-panel__link" href="https://wa.me/972545053903?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%95%D7%94%D7%AA%D7%90%D7%9E%D7%94%20%D7%90%D7%99%D7%A9%D7%99%D7%AA%20%D7%A2%D7%9C%20%D7%98%D7%91%D7%A2%D7%AA%20%D7%A7%D7%A8%D7%95%D7%A1%D6%BE%D7%90%D7%95%D7%91%D7%A8%20%D7%96%D7%94%D7%91%20%D7%A6%D7%94%D7%95%D7%91" target="_blank" rel="noopener">התאמה אישית בוואטסאפ
+              <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="dat-panel" tabindex="0" aria-label="סט טיפה משובצת רוז גולד">
+        <img class="dat-panel__img" src="assets/panel-m5.webp" alt="דוגמנית עונדת סט טיפה משובצת רוז גולד" width="860" height="1528" loading="lazy" draggable="false">
+        <div class="dat-panel__body">
+          <span class="dat-panel__chev" aria-hidden="true"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(4.5 4.5)" d="M15 7.5C15 7.776 14.776 8 14.5 8L8 8L8 14.5C8 14.776 7.776 15 7.5 15C7.224 15 7 14.776 7 14.5L7 8L0.5 8C0.224 8 0 7.776 0 7.5C0 7.224 0.224 7 0.5 7L7 7L7 0.5C7 0.224 7.224 0 7.5 0C7.776 0 8 0.224 8 0.5L8 7L14.5 7C14.776 7 15 7.224 15 7.5Z"/></svg></span>
+          <h3 class="dat-panel__title">סט טיפה רוז גולד</h3>
+          <div class="dat-panel__meta">
+            <img class="dat-panel__thumb" src="assets/p08-a.jpg" alt="סט טיפה משובצת רוז גולד" width="64" height="64" loading="lazy" draggable="false">
+            <p class="dat-panel__price">טבעת נישואין<br>₪7,900</p>
+          </div>
+          <div class="dat-panel__more">
+            <a class="dat-link dat-panel__link" href="https://wa.me/972545053903?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%95%D7%94%D7%AA%D7%90%D7%9E%D7%94%20%D7%90%D7%99%D7%A9%D7%99%D7%AA%20%D7%A2%D7%9C%20%D7%A1%D7%98%20%D7%98%D7%99%D7%A4%D7%94%20%D7%9E%D7%A9%D7%95%D7%91%D7%A6%D7%AA%20%D7%A8%D7%95%D7%96%20%D7%92%D7%95%D7%9C%D7%93" target="_blank" rel="noopener">התאמה אישית בוואטסאפ
+              <svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="dat-line" id="dat-line" aria-label="טבעות נוספות מהקולקציה">
+    <a class="dat-line__hero" href="#" aria-label="טבעת אובל וינטג׳ מרקיזות">
+      <img src="assets/feature-ring.webp" alt="דוגמנית עונדת טבעת אובל וינטג׳ מרקיזות" width="1100" height="1100" loading="lazy" draggable="false">
+    </a>
+    <div class="dat-line__carousel">
+      <button class="dat-line__arrow dat-line__arrow--next" type="button" aria-label="הבא"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"></path></svg></button>
+      <button class="dat-line__arrow dat-line__arrow--prev" type="button" aria-label="הקודם"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.5 4.502)" d="M18.853 7.852L11.853 14.852C11.755 14.95 11.627 14.998 11.499 14.998C11.371 14.998 11.243 14.949 11.145 14.852C10.95 14.657 10.95 14.34 11.145 14.145L17.291 7.999L0.5 7.999C0.224 7.999 0 7.775 0 7.499C0 7.223 0.224 6.999 0.5 6.999L17.293 6.999L11.147 0.853C10.952 0.658 10.952 0.341 11.147 0.146C11.342 -0.049 11.659 -0.049 11.854 0.146L18.854 7.146C18.9 7.192 18.937 7.248 18.962 7.309C19.013 7.431 19.013 7.569 18.962 7.691C18.936 7.75 18.899 7.806 18.853 7.852Z"></path></svg></button>
+      <div class="dat-line__viewport">
+      <div class="dat-line__track">
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p18-a.jpg" alt="טבעת אובל וינטג׳ מרקיזות" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p18-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת אובל וינטג׳ מרקיזות</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪18,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p02-a.jpg" alt="סוליטר אובל בזל" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p02-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר אובל בזל</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪3,250</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p03-a.jpg" alt="טבעת קרוס־אובר זהב צהוב" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p03-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת קרוס־אובר זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪3,400</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p07-a.jpg" alt="סוליטר עגול זהב צהוב" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p07-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪7,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p09-a.jpg" alt="סוליטר פרינסס" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p09-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר פרינסס</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪8,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p10-a.jpg" alt="טבעת איטרניטי אמרלד בזל" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p10-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת איטרניטי אמרלד בזל</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪9,800</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p14-a.jpg" alt="טבעת אובל שלוש אבנים" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p14-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת אובל שלוש אבנים</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪12,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p16-a.jpg" alt="טבעת טרילוגי עגולה" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p16-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת טרילוגי עגולה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪14,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p19-a.jpg" alt="סוליטר עגול שיבוץ עשיר" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p19-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול שיבוץ עשיר</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪19,800</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p21-a.jpg" alt="טבעת טיפה הילה" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p21-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת טיפה הילה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪22,500</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p08-a.jpg" alt="סט טיפה משובצת רוז גולד" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p08-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סט טיפה משובצת רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪7,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p04-a.jpg" alt="סוליטר עדין רוז גולד" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p04-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עדין רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪4,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p18-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p18-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת אובל וינטג׳ מרקיזות</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪18,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p02-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p02-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר אובל בזל</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪3,250</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p03-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p03-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת קרוס־אובר זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪3,400</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p07-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p07-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪7,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p09-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p09-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר פרינסס</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪8,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p10-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p10-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת איטרניטי אמרלד בזל</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪9,800</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p14-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p14-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת אובל שלוש אבנים</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪12,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p16-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p16-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת טרילוגי עגולה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪14,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p19-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p19-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול שיבוץ עשיר</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪19,800</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p21-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p21-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת טיפה הילה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪22,500</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p08-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p08-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סט טיפה משובצת רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪7,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p04-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p04-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עדין רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪4,900</p>
+        </a>
+      </div>
+    </div>
+    </div>
+  </section>
+<section class="dat-line dat-line--flip" id="dat-line-2" aria-label="טבעות נוספות מהקולקציה">
+    <a class="dat-line__hero" href="#" aria-label="טבעת אמרלד זהב צהוב">
+      <img src="assets/feature-ring-2.webp" alt="דוגמנית עונדת טבעת אמרלד זהב צהוב" width="1100" height="1100" loading="lazy" draggable="false">
+    </a>
+    <div class="dat-line__carousel">
+      <button class="dat-line__arrow dat-line__arrow--next" type="button" aria-label="הבא"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"></path></svg></button>
+      <button class="dat-line__arrow dat-line__arrow--prev" type="button" aria-label="הקודם"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.5 4.502)" d="M18.853 7.852L11.853 14.852C11.755 14.95 11.627 14.998 11.499 14.998C11.371 14.998 11.243 14.949 11.145 14.852C10.95 14.657 10.95 14.34 11.145 14.145L17.291 7.999L0.5 7.999C0.224 7.999 0 7.775 0 7.499C0 7.223 0.224 6.999 0.5 6.999L17.293 6.999L11.147 0.853C10.952 0.658 10.952 0.341 11.147 0.146C11.342 -0.049 11.659 -0.049 11.854 0.146L18.854 7.146C18.9 7.192 18.937 7.248 18.962 7.309C19.013 7.431 19.013 7.569 18.962 7.691C18.936 7.75 18.899 7.806 18.853 7.852Z"></path></svg></button>
+      <div class="dat-line__viewport">
+      <div class="dat-line__track">
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p13-a.jpg" alt="טבעת אמרלד זהב צהוב" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p13-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת אמרלד זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪12,700</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p01-a.jpg" alt="חצי איטרניטי רוז גולד" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p01-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">חצי איטרניטי רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪2,100</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p05-a.jpg" alt="סוליטר קלאסי נקי" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p05-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר קלאסי נקי</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪5,400</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p06-a.jpg" alt="טבעת שלוש אבנים עדינה" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p06-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת שלוש אבנים עדינה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪6,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p11-a.jpg" alt="סוליטר פרינסס שיבוץ מלא" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p11-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר פרינסס שיבוץ מלא</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪11,500</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p12-a.jpg" alt="טבעת וינטג׳ ספליט" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p12-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת וינטג׳ ספליט</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪11,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p15-a.jpg" alt="סט טיפה הילה רוז גולד" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p15-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סט טיפה הילה רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪14,800</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p17-a.jpg" alt="סוליטר עגול קלאסי" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p17-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול קלאסי</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪16,500</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p20-a.jpg" alt="סוליטר אובל הילה נסתרת" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p20-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר אובל הילה נסתרת</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪21,500</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p04-a.jpg" alt="סוליטר עדין רוז גולד" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p04-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עדין רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪4,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p08-a.jpg" alt="סט טיפה משובצת רוז גולד" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p08-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סט טיפה משובצת רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪7,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#">
+          <div class="dat-card__media">
+            <img src="assets/p21-a.jpg" alt="טבעת טיפה הילה" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p21-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת טיפה הילה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪22,500</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p13-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p13-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת אמרלד זהב צהוב</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪12,700</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p01-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p01-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">חצי איטרניטי רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪2,100</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p05-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p05-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר קלאסי נקי</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪5,400</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p06-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p06-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת שלוש אבנים עדינה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪6,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p11-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p11-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר פרינסס שיבוץ מלא</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪11,500</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p12-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p12-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת וינטג׳ ספליט</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪11,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p15-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p15-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סט טיפה הילה רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪14,800</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p17-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p17-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עגול קלאסי</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪16,500</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p20-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p20-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר אובל הילה נסתרת</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪21,500</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p04-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p04-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סוליטר עדין רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪4,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p08-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p08-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">סט טיפה משובצת רוז גולד</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪7,900</p>
+        </a>
+        <a class="dat-card dat-line__item" href="#" tabindex="-1" aria-hidden="true">
+          <div class="dat-card__media">
+            <img src="assets/p21-a.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+            <img class="dat-card__alt" src="assets/p21-b.jpg" alt="" width="464" height="464" loading="lazy" draggable="false">
+          </div>
+          <h3 class="dat-card__name">טבעת טיפה הילה</h3>
+          <p class="dat-card__specs">טבעת נישואין</p>
+          <p class="dat-card__price">₪22,500</p>
+        </a>
+      </div>
+      </div>
+    </div>
+  </section>
+  <section class="dat-seq" id="dat-seq" aria-labelledby="dat-seq-title" data-frames="97" data-stops="0,0.25,0.74,1">
+    <div class="dat-seq__stage">
+      <div class="dat-seq__frame">
+        <canvas class="dat-seq__canvas" width="1280" height="720" role="img" aria-label="טבעת טיפה הילה מסתובבת בתלת־ממד"></canvas>
+        <button class="dat-seq__dot" type="button" data-step="0" style="left:50%;top:52%" aria-expanded="false" aria-label="האבן המרכזית: יהלומים ותכשיטי יוקרה בהתאמה אישית" tabindex="-1"><i>01</i><span class="dat-seq__tip">יהלומים ותכשיטי יוקרה בהתאמה אישית</span></button>
+        <button class="dat-seq__dot" type="button" data-step="1" style="left:56.8%;top:42.6%" aria-expanded="false" aria-label="ההילה: ליווי אישי מלא מהרעיון ועד התוצאה" tabindex="-1"><i>02</i><span class="dat-seq__tip">ליווי אישי מלא מהרעיון ועד התוצאה</span></button>
+        <button class="dat-seq__dot" type="button" data-step="2" style="left:48.1%;top:59.3%" data-tip="up" aria-expanded="false" aria-label="החישוק: 7 שנות ניסיון, שקיפות מלאה ויחס אישי" tabindex="-1"><i>03</i><span class="dat-seq__tip">7 שנות ניסיון, שקיפות מלאה ויחס אישי</span></button>
+        <button class="dat-seq__dot" type="button" data-step="3" style="left:62.5%;top:75%" data-tip="up" aria-expanded="false" aria-label="הטבעת השלמה: שלחו הודעה לייעוץ לכל אירוע ורגע מיוחד עבורך" tabindex="-1"><i>04</i><span class="dat-seq__tip">שלחו הודעה לייעוץ לכל אירוע ורגע מיוחד עבורך</span></button>
+      </div>
+      <div class="dat-seq__copy">
+        <h2 class="dat-seq__title" id="dat-seq-title">כל פרט בטבעת מספר עלינו</h2>
+        <div class="dat-seq__steps">
+          <p class="dat-seq__step dat-seq__say" data-step="0">יהלום שנבחר בדיוק בשבילכם</p>
+          <p class="dat-seq__step dat-seq__say" data-step="1">טבעת שמיוצרת בהזמנה אישית</p>
+          <p class="dat-seq__step dat-seq__say" data-step="2" data-br="2">זהב לבן צהוב או רוז</p>
+          <p class="dat-seq__step dat-seq__say" data-step="3">אחריות ושירות אישי תמיד</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="dat dat-footer" id="dat-footer">
+  <div class="dat-footer__form">
+    <h2 class="dat-footer__form-title">צרו איתנו קשר לכל שאלה</h2>
+    <form class="dat-footer__fields" data-dat-wa-form novalidate>
+      <label class="dat-footer__field"><span class="dat-sr">שם</span><input type="text" name="name" placeholder="שם" autocomplete="name" required></label>
+      <label class="dat-footer__field"><span class="dat-sr">טלפון</span><input type="tel" name="phone" placeholder="טלפון" autocomplete="tel" inputmode="tel" dir="rtl" required></label>
+      <label class="dat-footer__field"><span class="dat-sr">הודעה</span><input type="text" name="message" placeholder="הודעה"></label>
+      <button class="dat-footer__send" type="submit">שליחה</button>
+    </form>
+  </div>
+
+  <div class="dat-footer__grid">
+    <div class="dat-footer__links">
+      <nav class="dat-footer__col" aria-label="ניווט">
+        <h3 class="dat-footer__head">ניווט</h3>
+        <a href="index.html">בית</a>
+        <a href="#">טבעות נישואין</a>
+        <a href="#">טבעות מעוצבות</a>
+        <a href="#">שרשראות</a>
+        <a href="#">סטים לחינה</a>
+        <a href="#">אודות</a>
+        <a href="#">צור קשר</a>
+      </nav>
+      <nav class="dat-footer__col" aria-label="עמודים נוספים">
+        <h3 class="dat-footer__head">עמודים נוספים</h3>
+        <a href="#">תקנון האתר</a>
+        <a href="#">מדיניות פרטיות</a>
+        <a href="#">הצהרת נגישות</a>
+      </nav>
+    </div>
+
+    <div class="dat-footer__brand">
+      <div class="dat-footer__ring" aria-hidden="true">
+        <img class="dat-footer__ring-shadow" src="assets/footer-ring-shadow.webp" alt="" width="1000" height="747" loading="lazy" draggable="false">
+        <img class="dat-footer__ring-cut" src="assets/footer-ring.webp" alt="" width="1000" height="747" loading="lazy" draggable="false">
+      </div>
+      <a class="dat-footer__logo" href="index.html" aria-label="דניאל אבי צדק – לדף הבית"><img src="assets/logo-black.svg" alt="AVI TSEDEK DIAMONDS" width="205" height="48" loading="lazy"></a>
+    </div>
+
+    <div class="dat-footer__contact">
+      <h3 class="dat-footer__head">צרו איתנו קשר</h3>
+      <a href="tel:+972545053903" dir="ltr">054-5053903</a>
+      <a href="https://wa.me/972545053903" target="_blank" rel="noopener">וואטסאפ</a>
+      <a href="https://www.instagram.com/avi_tsedek/" target="_blank" rel="noopener" dir="ltr">@avi_tsedek</a>
+      <div class="dat-footer__social">
+        <a class="dat-footer__soc" href="https://www.instagram.com/avi_tsedek/" target="_blank" rel="noopener" aria-label="אינסטגרם"><svg class="dat-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m21.436,8.26c-.058-1.225-.293-2.797-1.599-4.099-1.302-1.301-2.874-1.539-4.096-1.6-1.503-.086-5.979-.086-7.478,0-1.222.058-2.792.292-4.1,1.596-1.301,1.296-1.538,2.872-1.6,4.097-.086,1.503-.086,5.979,0,7.479.058,1.225.292,2.799,1.6,4.102,1.306,1.301,2.876,1.538,4.095,1.599.752.043,2.248.064,3.744.064s2.984-.021,3.733-.064c1.225-.058,2.798-.292,4.101-1.6,1.301-1.301,1.537-2.875,1.599-4.097.086-1.502.086-5.973,0-7.477Zm-.998,7.424c-.079,1.575-.471,2.605-1.309,3.443-.839.842-1.867,1.233-3.444,1.308-1.481.083-5.889.084-7.372,0-1.571-.079-2.601-.47-3.443-1.309-.841-.839-1.231-1.868-1.307-3.446-.085-1.481-.085-5.889,0-7.373.079-1.579.471-2.608,1.307-3.442.844-.84,1.873-1.23,3.446-1.305.74-.042,2.211-.063,3.683-.063s2.947.021,3.689.063c1.574.079,2.604.47,3.443,1.309.841.839,1.231,1.868,1.307,3.441v.005c.084,1.48.084,5.886,0,7.369ZM12,7.5c-2.481,0-4.5,2.019-4.5,4.5s2.019,4.5,4.5,4.5,4.5-2.019,4.5-4.5-2.019-4.5-4.5-4.5Zm0,8c-1.93,0-3.5-1.57-3.5-3.5s1.57-3.5,3.5-3.5,3.5,1.57,3.5,3.5-1.57,3.5-3.5,3.5Zm6.27-9c0,.414-.335.75-.75.75s-.755-.336-.755-.75.331-.75.745-.75h.01c.415,0,.75.336.75.75Z"/></svg></a>
+        <a class="dat-footer__soc" href="https://www.tiktok.com/@avi.tsedek" target="_blank" rel="noopener" aria-label="טיקטוק"><svg class="dat-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m20.354,6.955c-.094-.094-.221-.146-.354-.146h-.003c-.813,0-1.771-.257-2.333-.628-.872-.562-1.483-1.471-1.674-2.488-.04-.224-.06-.456-.058-.688,0-.133-.051-.262-.146-.356-.094-.095-.222-.148-.354-.148h-3.095c-.276,0-.5.224-.5.5v12.286c0,.216-.033.43-.098.637-.171.542-.541.984-1.044,1.246-.504.263-1.079.313-1.62.143-.541-.17-.983-.541-1.246-1.044-.262-.503-.312-1.078-.143-1.62.171-.541.541-.983,1.044-1.246.505-.262,1.077-.312,1.619-.143.153.046.317.021.446-.074.128-.094.204-.244.204-.403v-3.161c0-.25-.184-.461-.431-.495-.282-.04-.566-.059-.852-.059h-.003c-1.659,0-3.22.646-4.394,1.819-1.175,1.174-1.821,2.734-1.822,4.395,0,3.428,2.786,6.217,6.214,6.218h.002c3.427,0,6.216-2.787,6.217-6.214v-5.394c1.187.621,2.662.989,4.049.989.332-.005.519-.218.519-.5v-3.073c0-.133-.053-.26-.146-.354Zm-.854,2.91c-1.373-.091-2.783-.56-3.776-1.271-.154-.109-.354-.124-.52-.038-.167.086-.271.257-.271.445v6.285c0,2.875-2.341,5.214-5.217,5.214h-.002c-2.876,0-5.215-2.342-5.214-5.218,0-1.393.544-2.703,1.529-3.688.985-.984,2.294-1.526,3.687-1.526.109.021.19.002.285.008v2.098c-.593-.054-1.19.06-1.731.342-.74.386-1.285,1.037-1.535,1.832-.251.796-.177,1.643.209,2.382.386.74,1.037,1.285,1.833,1.536.797.25,1.643.176,2.382-.21.74-.386,1.285-1.037,1.535-1.833.096-.304.145-.619.145-.937V3.5h2.117c.013.125.029.249.052.372.242,1.29,1.013,2.438,2.111,3.146.61.404,1.506.688,2.382.768v2.08Z"/></svg></a>
+        <a class="dat-footer__soc" href="tel:+972545053903" aria-label="טלפון"><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.498 2.502)" d="M18.025 12.818L15.382 11.242C14.215 10.546 12.71 10.886 11.955 12.013L11.073 13.33C8.707 12.233 6.768 10.29 5.671 7.914L6.983 7.042C8.113 6.291 8.457 4.787 7.765 3.619L6.201 0.979C5.769 0.248 4.922 -0.129 4.069 0.04C2.694 0.315 1.483 1.159 0.746 2.354C0.014 3.542 -0.188 4.932 0.179 6.266C1.849 12.342 6.663 17.153 12.742 18.822C13.177 18.941 13.616 19 14.053 19C14.958 19 15.85 18.747 16.651 18.253C17.845 17.516 18.688 16.305 18.963 14.93C19.129 14.101 18.753 13.252 18.025 12.818ZM17.982 14.733C17.761 15.837 17.085 16.81 16.126 17.402C15.175 17.988 14.065 18.148 13.008 17.858C7.267 16.282 2.72 11.739 1.144 6.001C0.851 4.938 1.012 3.829 1.598 2.879C2.19 1.92 3.162 1.242 4.284 1.018C4.349 1.005 4.415 0.998 4.48 0.998C4.829 0.998 5.16 1.181 5.341 1.489L6.904 4.128C7.325 4.838 7.116 5.752 6.428 6.209L4.767 7.314C4.568 7.447 4.491 7.702 4.582 7.923C5.798 10.837 8.159 13.204 11.061 14.418C11.284 14.511 11.538 14.434 11.669 14.235L12.784 12.57C13.244 11.884 14.157 11.677 14.869 12.101L17.512 13.677C17.877 13.894 18.065 14.318 17.982 14.733Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dat-footer__bottom">
+    <p>© דניאל אבי צדק · כל הזכויות שמורות</p>
+    <p>האתר נבנה ע"י <a href="https://idobardigital.com" target="_blank" rel="noopener">עידו בר</a></p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<div class="dat dat-quiz" id="dat-quiz" role="dialog" aria-modal="true" aria-labelledby="dat-quiz-title" inert hidden>
+  <div class="dat-quiz__backdrop" data-dat-quiz-close></div>
+  <div class="dat-quiz__card">
+    <button class="dat-quiz__close" type="button" aria-label="סגירה" data-dat-quiz-close><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(5.5 5.501)" d="M12.854 12.145C13.049 12.34 13.049 12.657 12.854 12.852C12.756 12.95 12.628 12.998 12.5 12.998C12.372 12.998 12.244 12.949 12.146 12.852L6.5 7.206L0.854 12.852C0.756 12.95 0.628 12.998 0.5 12.998C0.372 12.998 0.244 12.949 0.146 12.852C-0.049 12.657 -0.049 12.34 0.146 12.145L5.792 6.499L0.146 0.853C-0.049 0.658 -0.049 0.341 0.146 0.146C0.341 -0.049 0.658 -0.049 0.853 0.146L6.499 5.792L12.145 0.146C12.34 -0.049 12.657 -0.049 12.852 0.146C13.047 0.341 13.047 0.658 12.852 0.853L7.207 6.499L12.854 12.145Z"/></svg></button>
+    <div class="dat-quiz__media" aria-hidden="true"><img src="assets/footer-ring-shadow.webp" alt="" width="1000" height="747" loading="lazy" draggable="false"></div>
+    <div class="dat-quiz__body">
+      <p class="dat-quiz__step" aria-live="polite"><span data-quiz-num>1</span> / 3</p>
+      <div class="dat-quiz__bar" aria-hidden="true"><i></i><i></i><i></i></div>
+
+      <section class="dat-quiz__pane is-on" data-quiz-pane="0" data-quiz-key="מחפש/ת">
+        <h2 class="dat-quiz__title" id="dat-quiz-title">בואו נמצא את התכשיט שלכם</h2>
+        <p class="dat-quiz__sub">3 שאלות קצרות ונחזור אליכם בוואטסאפ עם הצעה מותאמת אישית.</p>
+        <p class="dat-quiz__q">מה תרצו למצוא?</p>
+        <div class="dat-quiz__opts" role="radiogroup" aria-label="מה תרצו למצוא">
+          <button type="button" role="radio" aria-checked="false" data-v="טבעת נישואין">טבעת נישואין</button>
+          <button type="button" role="radio" aria-checked="false" data-v="טבעת מעוצבת">טבעת מעוצבת</button>
+          <button type="button" role="radio" aria-checked="false" data-v="שרשרת">שרשרת</button>
+          <button type="button" role="radio" aria-checked="false" data-v="סט לחינה">סט לחינה</button>
+        </div>
+      </section>
+
+      <section class="dat-quiz__pane" data-quiz-pane="1" data-quiz-key="אירוע">
+        <h2 class="dat-quiz__title">לאיזה רגע מיוחד?</h2>
+        <p class="dat-quiz__q">מה האירוע?</p>
+        <div class="dat-quiz__opts" role="radiogroup" aria-label="מה האירוע">
+          <button type="button" role="radio" aria-checked="false" data-v="הצעת נישואין">הצעת נישואין</button>
+          <button type="button" role="radio" aria-checked="false" data-v="חתונה">חתונה</button>
+          <button type="button" role="radio" aria-checked="false" data-v="יום הולדת או יום נישואין">יום הולדת או יום נישואין</button>
+          <button type="button" role="radio" aria-checked="false" data-v="פינוק לעצמי">פינוק לעצמי</button>
+        </div>
+        <button class="dat-quiz__back" type="button" data-quiz-back><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"/></svg><span>חזרה</span></button>
+      </section>
+
+      <section class="dat-quiz__pane" data-quiz-pane="2" data-quiz-key="תקציב">
+        <h2 class="dat-quiz__title">כמעט סיימנו</h2>
+        <p class="dat-quiz__q">מה התקציב המשוער?</p>
+        <div class="dat-quiz__opts" role="radiogroup" aria-label="מה התקציב המשוער">
+          <button type="button" role="radio" aria-checked="false" data-v="עד 5,000 ₪">עד ₪5,000</button>
+          <button type="button" role="radio" aria-checked="false" data-v="5,000 עד 10,000 ₪">₪5,000 עד ₪10,000</button>
+          <button type="button" role="radio" aria-checked="false" data-v="10,000 עד 20,000 ₪">₪10,000 עד ₪20,000</button>
+          <button type="button" role="radio" aria-checked="false" data-v="מעל 20,000 ₪">מעל ₪20,000</button>
+        </div>
+        <div class="dat-quiz__actions">
+          <button class="dat-quiz__send" type="button" data-quiz-send disabled>שליחה בוואטסאפ</button>
+          <button class="dat-quiz__back" type="button" data-quiz-back><svg class="dat-icon" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(2.499 4.499)" d="M19.001 7.501C19.001 7.777 18.777 8.001 18.501 8.001L1.708 8.001L7.854 14.147C8.049 14.342 8.049 14.659 7.854 14.854C7.756 14.952 7.628 15 7.5 15C7.372 15 7.244 14.951 7.146 14.854L0.146 7.854C0.1 7.808 0.063 7.752 0.038 7.691C-0.013 7.569 -0.013 7.431 0.038 7.309C0.063 7.247 0.1 7.192 0.146 7.146L7.146 0.146C7.341 -0.049 7.658 -0.049 7.853 0.146C8.048 0.341 8.048 0.658 7.853 0.853L1.707 6.999L18.501 6.999C18.777 7.001 19.001 7.225 19.001 7.501Z"/></svg><span>חזרה</span></button>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="dat"><button class="dat-sound" id="dat-sound" type="button" aria-pressed="false" aria-label="הפעלת מוזיקת רקע" title="מוזיקה">
+  <svg class="dat-icon dat-sound__on" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(1.5 2.5)" d="M10.742 0.204C9.968 -0.155 9.08 -0.035 8.428 0.517L4.737 3.644C4.466 3.873 4.122 3.999 3.767 3.999L2 3.999C0.897 3.999 0 4.896 0 5.999L0 12.998C0 14.101 0.897 14.998 2 14.998L3.767 14.998C4.121 14.998 4.466 15.124 4.737 15.353L8.427 18.481C8.83 18.822 9.323 18.999 9.824 18.999C10.134 18.999 10.446 18.932 10.743 18.794C11.518 18.435 12 17.68 12 16.825L12 2.172C12 1.318 11.518 0.563 10.742 0.204ZM11 16.827C11 17.295 10.746 17.692 10.322 17.889C9.897 18.086 9.428 18.022 9.073 17.721L5.383 14.594C4.932 14.212 4.358 14.001 3.767 14.001L2 14.001C1.448 14.001 1 13.552 1 13.001L1 6.002C1 5.451 1.448 5.002 2 5.002L3.767 5.002C4.358 5.002 4.932 4.792 5.383 4.409L9.074 1.282C9.43 0.98 9.898 0.917 10.322 1.113C10.746 1.31 11 1.707 11 2.175L11 16.827ZM15.09 4.905C16.322 6.132 17 7.763 17 9.5C17 11.237 16.322 12.868 15.09 14.095C14.992 14.192 14.865 14.241 14.737 14.241C14.609 14.241 14.48 14.192 14.383 14.094C14.189 13.899 14.189 13.582 14.385 13.387C15.427 12.35 16 10.97 16 9.501C16 8.032 15.427 6.652 14.385 5.615C14.189 5.42 14.189 5.103 14.383 4.908C14.578 4.711 14.895 4.711 15.09 4.905ZM21 9.5C21 12.307 19.906 14.943 17.921 16.924C17.823 17.021 17.695 17.07 17.567 17.07C17.439 17.07 17.311 17.021 17.213 16.923C17.019 16.728 17.019 16.411 17.214 16.216C19.011 14.424 20 12.039 20 9.5C20 6.961 19.011 4.576 17.214 2.784C17.019 2.589 17.019 2.272 17.213 2.077C17.408 1.881 17.726 1.882 17.921 2.076C19.906 4.057 21 6.693 21 9.5Z"/></svg>
+  <svg class="dat-icon dat-sound__off" viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(1.499 2.501)" d="M12.001 12.499L12.001 16.829C12.001 17.682 11.521 18.433 10.748 18.793C10.451 18.931 10.139 18.999 9.828 18.999C9.327 18.999 8.833 18.822 8.429 18.48L6.887 17.169C6.677 16.99 6.652 16.675 6.83 16.465C7.01 16.254 7.324 16.228 7.535 16.407L9.075 17.718C9.432 18.02 9.9 18.085 10.326 17.886C10.749 17.69 11.001 17.295 11.001 16.828L11.001 12.499C11.001 12.223 11.225 11.999 11.501 11.999C11.777 11.999 12.001 12.223 12.001 12.499ZM11.854 8.853L1.855 18.853C1.757 18.951 1.629 18.999 1.501 18.999C1.373 18.999 1.245 18.95 1.147 18.853C0.952 18.658 0.952 18.341 1.147 18.146L4.215 15.078C4.071 15.033 3.923 15 3.77 15L2 15C0.897 15 0 14.103 0 13L0 6C0 4.897 0.897 4 2 4L3.77 4C4.122 4 4.466 3.875 4.74 3.646L8.428 0.519C9.084 -0.036 9.973 -0.154 10.748 0.206C11.52 0.565 12.001 1.318 12.001 2.171L12.001 7.293L19.147 0.147C19.342 -0.048 19.659 -0.048 19.854 0.147C20.049 0.342 20.049 0.66 19.854 0.855L11.855 8.855C11.855 8.852 11.854 8.853 11.854 8.853ZM4.978 14.314L11.001 8.292L11.001 2.168C11.001 1.702 10.749 1.307 10.326 1.111C9.901 0.912 9.432 0.976 9.073 1.281L5.384 4.409C4.929 4.789 4.357 4.999 3.771 4.999L2.001 4.999C1.449 4.999 1.001 5.448 1.001 5.999L1.001 12.999C1.001 13.55 1.449 13.999 2.001 13.999L3.771 13.999C4.195 13.999 4.61 14.11 4.978 14.314ZM16.093 7.281C15.828 7.362 15.681 7.642 15.762 7.906C16.357 9.843 15.829 11.943 14.386 13.386C14.191 13.581 14.191 13.898 14.386 14.093C14.484 14.191 14.612 14.239 14.74 14.239C14.868 14.239 14.996 14.19 15.094 14.093C16.8 12.387 17.422 9.904 16.718 7.612C16.637 7.348 16.357 7.2 16.093 7.281ZM19.718 4.478C19.584 4.235 19.279 4.149 19.039 4.28C18.797 4.413 18.708 4.717 18.841 4.959C20.851 8.62 20.182 13.248 17.216 16.214C17.021 16.409 17.021 16.726 17.216 16.921C17.314 17.019 17.442 17.067 17.57 17.067C17.698 17.067 17.826 17.018 17.924 16.921C21.201 13.644 21.939 8.527 19.718 4.478Z"/></svg>
+</button></div>
+<script src="header.js"></script>
+</body>
+</html>
