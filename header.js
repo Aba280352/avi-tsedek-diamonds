@@ -238,7 +238,18 @@
       var gap = parseFloat(getComputedStyle(stage).columnGap); if (!isFinite(gap)) gap = W * .09;
       S = { angle: attr('angle', 4, 40, 20), depth: attr('depth', 1.5, 30, 6.5), duration: attr('duration', 0, 5, 1), drag: attr('drag', .2, 4, 1), gap: Math.min(W * .8, Math.max(0, gap)), dir: getComputedStyle(rr).direction === 'ltr' ? 1 : -1 };
       var s = JSON.stringify(S) + W + 'x' + stage.clientWidth;
-      if (s !== sig) { sig = s; layout(); render(); }
+      if (s !== sig) { sig = s; layout(); render(); fit(); }
+    }
+    /* mobile: measure how far the side cards swing past the stage and reserve exactly that much room, plus a 12px gap */
+    function fit() {
+      if (!window.matchMedia('(max-width: 767px)').matches) { rr.style.removeProperty('--ring-over-top'); rr.style.removeProperty('--ring-over-bot'); return; }
+      var sr = stage.getBoundingClientRect(), up = 0, down = 0;
+      cards.forEach(function (c) {
+        if (c.style.visibility === 'hidden') return;
+        var r = c.getBoundingClientRect();
+        up = Math.max(up, sr.top - r.top); down = Math.max(down, r.bottom - sr.bottom);
+      });
+      rr.style.setProperty('--ring-over-top', Math.ceil(up) + 'px'); rr.style.setProperty('--ring-over-bot', Math.ceil(down) + 'px');
     }
     function layout() {
       pitch = W + S.gap; step = S.angle * Math.PI / 180; R = pitch / Math.sin(step); P = S.depth * W;
@@ -310,7 +321,8 @@
     stage.addEventListener('pointerup', release); stage.addEventListener('pointercancel', release);
     stage.addEventListener('dragstart', function (e) { e.preventDefault(); });
 
-    settings(); render();
+    settings(); render(); fit();
+    window.addEventListener('load', fit); if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
     if ('ResizeObserver' in window) new ResizeObserver(settings).observe(stage); else window.addEventListener('resize', settings);
   });
 
