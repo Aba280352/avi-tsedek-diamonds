@@ -240,13 +240,20 @@
       var s = JSON.stringify(S) + W + 'x' + stage.clientWidth;
       if (s !== sig) { sig = s; layout(); render(); fit(); }
     }
-    /* mobile: measure how far the side cards swing past the stage and reserve exactly that much room, plus a 12px gap */
+    /* mobile: size the stage to the tallest card (2-line names make some cards taller), then reserve exactly the little the
+       side cards still swing past it, plus a 12px gap. Desktop keeps the CSS height. */
     function fit() {
-      if (!window.matchMedia('(max-width: 767px)').matches) { rr.style.removeProperty('--ring-over-top'); rr.style.removeProperty('--ring-over-bot'); return; }
+      if (!window.matchMedia('(max-width: 767px)').matches) {
+        stage.style.removeProperty('height'); rr.style.removeProperty('--ring-over-top'); rr.style.removeProperty('--ring-over-bot'); return;
+      }
+      var hmax = 0;
+      cards.forEach(function (c) { hmax = Math.max(hmax, c.offsetHeight); });
+      if (hmax) stage.style.height = hmax + 'px';
       var sr = stage.getBoundingClientRect(), up = 0, down = 0;
       cards.forEach(function (c) {
         if (c.style.visibility === 'hidden') return;
         var r = c.getBoundingClientRect();
+        if (r.right <= 0 || r.left >= window.innerWidth) return;   // cards swung fully off screen cannot touch the text
         up = Math.max(up, sr.top - r.top); down = Math.max(down, r.bottom - sr.bottom);
       });
       rr.style.setProperty('--ring-over-top', Math.ceil(up) + 'px'); rr.style.setProperty('--ring-over-bot', Math.ceil(down) + 'px');
