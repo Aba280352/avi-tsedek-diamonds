@@ -618,3 +618,10 @@ html.lenis, html.lenis body { height: auto; }
   .dat-quiz__body { grid-column: 1; min-height: 0; padding: 72px 20px 28px; }
 }
 @media (prefers-reduced-motion: reduce) { .dat-quiz, .dat-quiz__card { transition: none; } .dat-quiz__pane.is-on { animation: none; } }
+
+/* ---- Mobile only: the 3D ring carousels keep the same 12px gap above and below the cards as between title and subtitle.
+   The side cards swing toward the viewer and grow, so the stage needs 19.5vw of room on each side to clear them. ---- */
+@media (max-width: 767px) {
+  .dat-main .dat-ring__stage { margin-top: calc(19.5vw + 12px); }
+  .dat-main .dat-ring__nav { margin-top: calc(19.5vw + 12px); }
+}
