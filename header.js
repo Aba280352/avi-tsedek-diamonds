@@ -9,6 +9,7 @@
   var lenis = null;
   if (window.Lenis && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     lenis = new window.Lenis({ duration: 1.15, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel: true });
+    window.__datLenis = lenis;   // the gift popup pauses the page scroll through this
     var lraf = function (t) { lenis.raf(t); requestAnimationFrame(lraf); };
     requestAnimationFrame(lraf);
   }
