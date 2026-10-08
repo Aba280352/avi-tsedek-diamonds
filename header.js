@@ -367,7 +367,7 @@
     var seq = document.getElementById('dat-seq'); if (!seq) return;
     var canvas = seq.querySelector('.dat-seq__canvas'), ctx = canvas.getContext('2d');
     var stage = seq.querySelector('.dat-seq__stage');
-    var dots = seq.querySelectorAll('.dat-seq__dot'), steps = seq.querySelectorAll('.dat-seq__step');
+    var steps = seq.querySelectorAll('.dat-seq__step');
     var N = parseInt(seq.getAttribute('data-frames'), 10) || 1, K = steps.length;
     var stops = (seq.getAttribute('data-stops') || '').split(',').map(parseFloat);
     var frames = [], started = false, drawn = -1, wanted = 0, active = -1, sraf = 0;
@@ -417,6 +417,7 @@
       var r = seq.getBoundingClientRect(), top = parseFloat(getComputedStyle(stage).top) || 0;
       var run = r.height - stage.offsetHeight;
       var p = run > 0 ? Math.min(1, Math.max(0, (top - r.top) / run)) : 0;
+      seq.style.setProperty('--seq-p', p.toFixed(4));
       var seg = Math.min(K - 1, Math.floor(p * K)), t = p * K - seg;
       var from = seg === 0 ? stops[0] : stops[seg - 1], to = stops[seg];
       var k = seg === 0 ? 1 : Math.min(1, t / MOVE);
@@ -427,7 +428,7 @@
       var on = (seg === 0 || t >= MOVE * 0.85) ? seg : -1;
       if (on !== active) {
         active = on;
-        for (var i = 0; i < K; i++) { dots[i].classList.toggle('is-on', i === on); dots[i].classList.remove('is-open'); dots[i].setAttribute('aria-expanded', 'false'); dots[i].tabIndex = i === on ? 0 : -1; steps[i].classList.toggle('is-on', i === (on < 0 ? seg : on)); }
+        for (var i = 0; i < K; i++) { steps[i].classList.toggle('is-on', i === (on < 0 ? seg : on)); }
       }
       if (r.top < window.innerHeight * 2.5 && r.bottom > -window.innerHeight) load();
       draw();
@@ -435,11 +436,6 @@
     var queue = function () { if (!sraf) sraf = requestAnimationFrame(update); };
     window.addEventListener('scroll', queue, { passive: true });
     window.addEventListener('resize', queue);
-    // hotspot text: hover/focus on desktop, tap to open or close on touch
-    Array.prototype.forEach.call(dots, function (d) {
-      d.addEventListener('click', function (e) { e.stopPropagation(); var open = !d.classList.contains('is-open'); d.classList.toggle('is-open', open); d.setAttribute('aria-expanded', open ? 'true' : 'false'); });
-    });
-    document.addEventListener('click', function () { Array.prototype.forEach.call(dots, function (d) { d.classList.remove('is-open'); d.setAttribute('aria-expanded', 'false'); }); });
     update();
   })();
 

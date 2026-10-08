@@ -381,21 +381,12 @@ html.lenis, html.lenis body { height: auto; }
 
 /* ---- About: scroll sequence of the ring in 3D with hotspots (black) ----- */
 .dat-seq { --seq-top: 124px; --seq-len: 7; position: relative; height: calc((100svh - var(--seq-top)) * var(--seq-len)); background: var(--ink); color: var(--paper); }
-.dat-seq__stage { position: sticky; top: var(--seq-top); height: calc(100svh - var(--seq-top)); overflow: hidden; display: flex; justify-content: center; align-items: center; gap: 3vw; padding-inline: var(--side-padding); padding-inline-start: calc(var(--side-padding) + 7vw); }
-.dat-seq__frame { --fw: min(50vw, calc((100svh - var(--seq-top)) * 16 / 9)); position: relative; flex: none; width: var(--fw); margin-inline: calc(var(--fw) * -.17); aspect-ratio: 16 / 9; }
+.dat-seq__stage { position: sticky; top: var(--seq-top); height: calc(100svh - var(--seq-top)); overflow: hidden; display: flex; justify-content: center; align-items: center; gap: 3vw; padding-inline: var(--side-padding); }
+.dat-seq__frame { --fw: min(62vw, calc((100svh - var(--seq-top)) * 16 / 9)); position: relative; flex: none; width: var(--fw); margin-inline: calc(var(--fw) * -.2); aspect-ratio: 16 / 9; }
+.dat-seq__bar { position: absolute; inset-inline: 0; top: 0; height: 5px; background: rgba(252, 250, 246, .18); pointer-events: none; z-index: 2; }
+.dat-seq__bar i { position: absolute; inset-block: 0; inset-inline-start: 0; width: 100%; background: var(--paper); transform: scaleX(var(--seq-p, 0)); transform-origin: right center; }
 .dat-seq__canvas { display: block; width: 100%; height: 100%; }
-.dat .dat-seq__dot { position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px; padding: 0; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--paper); background: rgba(0, 0, 0, .45); color: var(--paper); opacity: 0; visibility: hidden; transform: scale(.6); transition: opacity .45s ease, transform .6s cubic-bezier(.2, 0, 0, 1), visibility 0s .45s, background-color .3s ease; cursor: pointer; }
-.dat-seq__dot i { font-style: normal; font-size: 14px; font-weight: 300; line-height: 1; letter-spacing: .04em; }
-.dat-seq__dot::after { content: ""; position: absolute; inset: -1px; border-radius: 50%; border: 1px solid var(--paper); opacity: 0; pointer-events: none; }
-.dat .dat-seq__dot.is-on { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
-.dat-seq__dot.is-on::after { animation: dat-ping 2.2s cubic-bezier(.2, 0, 0, 1) infinite; }
-.dat .dat-seq__dot.is-on:hover, .dat .dat-seq__dot.is-open { background: rgba(255, 255, 255, .16); }
-@keyframes dat-ping { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.9); opacity: 0; } }
-.dat-seq__tip { position: absolute; top: calc(100% + 14px); left: 50%; width: max-content; max-width: min(260px, 70vw); padding: 12px 16px; border: 1px solid rgba(255, 255, 255, .5); background: var(--ink); color: var(--paper); font-size: 16px; font-weight: 300; line-height: 1.4; text-align: center; letter-spacing: 0; opacity: 0; visibility: hidden; transform: translate(-50%, 6px); transition: opacity .3s ease, transform .4s cubic-bezier(.2, 0, 0, 1), visibility 0s .3s; pointer-events: none; z-index: 3; }
-.dat-seq__dot[data-tip="up"] .dat-seq__tip { top: auto; bottom: calc(100% + 14px); transform: translate(-50%, -6px); }
-.dat-seq__dot.is-on:hover .dat-seq__tip, .dat-seq__dot.is-on:focus-visible .dat-seq__tip, .dat-seq__dot.is-open .dat-seq__tip { opacity: 1; visibility: visible; transform: translate(-50%, 0); transition-delay: 0s; }
-.dat-seq__dot .dat-seq__tip, .dat-seq__dot i { cursor: default; }
-.dat-seq__copy { order: -1; position: relative; z-index: 1; flex: none; width: min(54vw, 840px); display: flex; flex-direction: column; gap: var(--space-element-max); align-items: flex-start; justify-content: center; text-align: start; }
+.dat-seq__copy { order: -1; position: relative; z-index: 1; flex: none; width: min(50vw, 800px); display: flex; flex-direction: column; gap: var(--space-element-max); align-items: flex-start; justify-content: center; text-align: start; }
 .dat-seq__title { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .dat-seq__steps { --say: clamp(56px, 7vw, 100px); display: grid; width: 100%; }
 .dat-seq__step { grid-area: 1 / 1; align-self: center; margin: 0; text-align: start; opacity: 0; transform: translateY(14px); transition: opacity .45s ease, transform .6s cubic-bezier(.2, 0, 0, 1); }
@@ -410,12 +401,12 @@ html.lenis, html.lenis body { height: auto; }
 @media (max-width: 1024px) {
   .dat-seq { --seq-top: 68px; }
   .dat-seq__stage { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; align-items: stretch; gap: 0; padding-inline: 0; }
-  .dat-seq__frame { --fw: 170%; grid-column: 1; grid-row: 1; align-self: center; width: 170%; margin-inline: -35%; }
+  .dat-seq__frame { --fw: 190%; grid-column: 1; grid-row: 1; align-self: center; width: 190%; margin-inline: -45%; }
   .dat-seq__copy { order: 0; width: auto; grid-column: 1; grid-row: 2; padding: 0 var(--side-padding) 28px; }
   .dat-seq__steps { --say: clamp(40px, 10.5vw, 64px); }
   .dat-seq__say { max-width: none; }
 }
-@media (prefers-reduced-motion: reduce) { .dat-seq__dot, .dat-seq__step, .dat-seq__ch, .dat-seq__tip { transition: none; } .dat-seq__dot.is-on::after { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .dat-seq__step, .dat-seq__ch { transition: none; } }
 
 /* ---- Even vertical rhythm: one gap between every home-page section --------- */
 .dat { --section-gap: 9vw; }
